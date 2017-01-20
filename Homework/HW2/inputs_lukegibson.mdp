@@ -1,0 +1,15 @@
+integrator               = md ; dont change
+dt                       = 0.0005 ; time step for integration 
+nsteps                   = 2000000 ; max number of steps
+nstxout                  = 5000 ; number of steps between writing coordinates to traj 
+nstvout                  = 5000 ; number of steps between writing velocities to traj
+nstlog                   = 5000 ; number of steps between writing energies to log file
+nstenergy                = 10 ; dont change, num of steps between writing energies to energy file
+nstxout-compressed       = 10 ; dont change, num of steps between writing position coordinates using lossy compression
+nstcalcenergy            = 10 ; dont change, num of steps between calc the energies
+rcoulomb                 = 1.0 ; distance for the Coulomb cut-off
+rvdw                     = 1.0 ; distance for the LJ/Buckingham cut-off
+tcoupl                   = no ; dont change, temperature coupling
+gen-vel                  = yes ; generates vel using Maxwell distrib. for temp specified by gen-temp
+gen-temp                 = 100 ; temperature for Maxwell distribution
+gen-seed                 = 173529 ; dont change, initializes random num generator for random velocities
