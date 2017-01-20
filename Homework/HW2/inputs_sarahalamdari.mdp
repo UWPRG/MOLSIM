@@ -1,0 +1,15 @@
+integrator               = md ; (dont change) integrator used to integrate eqns of motion
+dt                       = 0.03 ; time step for integration
+nsteps                   = 2000000 ; max number of steps to integrate
+nstxout                  = 50000 ; steps between writing energies to output traj
+nstvout                  = 50000 ; same as nstx for writing velocities 
+nstlog                   = 50000 ; steps that elapse between writing energies to log file 
+nstenergy                = 10 ; (dont change) steps between writing energies to energy file 
+nstxout-compressed       = 10 ; (dont change)  steps between writing position with lossy compres 
+nstcalcenergy            = 10 ; (dont change) steps between calculating the energies
+rcoulomb                 = 1.0 ; distance for coulomb cutoff 
+rvdw                     = 1.0 ; distance for LJ or Buckingham cut-off
+tcoupl                   = no ; (dont change) indicates no temperature coupling
+gen-vel                  = yes; generates velocities according to Maxwell distribution 
+gen-temp                 = 100 ; temp for Maxwell distribution
+gen-seed                 = 173529 ; (dont change) used to initialize and generate rand velocities
