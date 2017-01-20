@@ -1,0 +1,15 @@
+integrator               = md ; dont change ;different methods for the integration of the equations of motion
+dt                       = 0.0005 ;time step for integration
+nsteps                   = 2000000 ;maximum number of steps to integrate or minimize
+nstxout                  = 5000 ;number of steps that elapse between writing coordinates to output trajectory file
+nstvout                  = 5000 ;number of steps that elapse between writing velocities to output trajectory
+nstlog                   = 5000 ;number of steps that elapse between writing energies to the log file
+nstenergy                = 10 ; dont change ;number of steps that elapse between writing energies to energy file
+nstxout-compressed       = 10 ; dont change ;number of steps that elapse between writing position coordinates using lossy compressionnumber
+nstcalcenergy            = 10 ; dont change ;number of steps that elapse between calculating the energies
+rcoulomb                 = 1.0 ;distance for the Coulomb cut-off
+rvdw                     = 1.0 ;distance for the LJ or Buckingham cut-off
+tcoupl                   = no ; dont change ;temperature coupling
+gen-vel                  = yes ;generate velocities according to a Maxwell distribution
+gen-temp                 = 100 ;temperature for Maxwell distribution
+gen-seed                 = 173529 ;dont change ;used to initialize random generator for random velocities
