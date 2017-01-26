@@ -1,0 +1,15 @@
+integrator               = md ; dont change   #for integrating Newton's equation
+dt                       = 0.05 ;   #time step in simulation
+nsteps                   = 2000000 ;  #Number of steps taken in simulation
+nstxout                  = 5000 ;    #Number of steps that elapse between writing coordinates to output trajectory file.
+nstvout                  = 5000 ;    #Number of steps that elapse between writing velocities to output trajectory file.
+nstlog                   = 5000 ;     #Number of steps that elapse between writing energies to the log file.
+nstenergy                = 10 ; dont change  #Number of steps that elapse between writing energies to energy file.
+nstxout-compressed       = 10 ; dont change  #number of steps that elapse between writing position coordinates using compression
+nstcalcenergy            = 10 ; dont change  #number of stapes that elapse between calculating energies.
+rcoulomb                 = 1.0 ;  #Distance for the coulomb cut off
+rvdw                     = 1.0 ;   #Distance for the LJ cut off
+tcoupl                   = no ; dont change   #No temperature coupling (type of Temperature coupling)
+gen-vel                  = yes ;    #generate velocities according to a Maxwell distribution at temp
+gen-temp                 = 100 ;    #Temperature for Maxwell distribution
+gen-seed                 = 173529 ; dont change  #used to initialize random generator for random velocities.   
