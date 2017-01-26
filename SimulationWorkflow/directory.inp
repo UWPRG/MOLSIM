@@ -1,0 +1,22 @@
+#!/bin/bash
+###source the goodies we need for GROMACS
+MYROOT=/suppscr/pfaendtner/wesley/MOLSIM/SimulationWorkFlow/HW4
+
+###should not need to change these
+source /suppscr/pfaendtner/vanouk/scripts/activate_amber14.sh
+source /gscratch/pfaendtner/wesley/software/ENVIRONMENT.sh
+if [ ! -d $MYROOT/${name} ] ; then
+  mkdir $MYROOT/${name}
+fi
+PROJROOT=$MYROOT/${name}
+PROPERTIES=$MYROOT/properties
+STRUCTURES=$MYROOT/structures
+SANDBOX=$MYROOT
+if [ ! -d $PROJROOT/boxmaker ] ; then
+  mkdir $PROJROOT/boxmaker 
+fi
+if [ ! -d $PROJROOT/production_md ] ; then
+  mkdir $PROJROOT/production_md
+fi
+SETUP=$PROJROOT/boxmaker
+ILhome=$PROJROOT/production_md
