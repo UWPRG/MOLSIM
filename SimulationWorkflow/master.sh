@@ -9,6 +9,8 @@ name=$1						#set variable name to first argument
 source ${name}.inp				#source the input file
 LABEL=${name}.${Temp}				#set a label to organize your files
 echo "sourcing ${name}.inp"
+echo " "
+echo "beginning ${name} runs"
 cat ${name}.inp 				#print input to log file
 sed -i "6s/.*/name=${name}/" ${name}.inp	#print name to input file
 wait

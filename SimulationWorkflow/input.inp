@@ -4,46 +4,11 @@
 ### AND EXECUTE PRODUCTION MD RUN AND ANALYSES
 ###*****************************************************************
 
-### MAIN PARAMETERS FOR DES/IL SYSTEMS
+### MAIN PARAMETERS 
 Temp=350
-MD=yes			#yes or no ; choose yes if no eq MD files are present
-Analysis=yes		#yes or no ; choose yes if running eq visc analysis
-nvt_production=yes
-npt_production=no
-nvt_length=1000000   	#1ns (production)
-npt_length=1000000	#1ns (production)
-
-###BOXMAGIC SETUP
-SOLVENT_TYPE=IL      #Type of solvent. (IL, organic, DES, water, none). 
-IL_CAT=BMM            #Resname of IL cation and all associated files
-IL_AN=CLD             #Resname of IL anion and all associated files
-ORG_MOL=None           #Resname of the organic solvent or h-bond donating molecule.
-MOLM=174.67           #Molar mass of the organic molecule or IL pair in amu.
-MOLM_HBND=60.06       #Molar mass of the h-donor in DES type
-DENS=1                #organic molecule, DES, or IL in g/cm^3. Guess 1 if unknown.
-PERC_TYPE=mole        #(mass, mole, volume) 
-
-#SIMULATIONS CONTAINING SOLUTE(S).
-SOLUTE=start          #pdb of the solute. Only protein is supported
-		      #combine multiple solutes in a single pdb
-                      ###Solute and vol% inputs have not been tested for DES
-#SIMULATIONS CONTAINING NO SOLUTE(S)
-SOLVENT_BOX=yes       #(yes, no) This will override $SOLUTE above.
-BOX_X=50              #Size of box in X direction in Angstroms.
-BOX_Y=50              #Size of box in Y direction in Angstroms.
-BOX_Z=50              #Size of box in Z direction in Angstroms.
-
-#GENERAL PARAMETERS. TRY YOUR BEST TO FILL OUT ALL VARIABLES.
-#AND LEAVE UNRELEVANT PARAMETERS BLANK
-#note: percent IL has been moved to master.sh # (in organic). no water=integer 100.
-AMBER_FF=ff99SBildn   #amber ff (ff99SBildn, ff99SB, see tleap force fields)
-WAT_TYPE=TIP3PBOX     #(P3PBOX, TIP4PBOX, SPCBOX, see water types in tleap)
-BUFFER=12.5           #Space between the solue and the edge of the box in Angstroms.
-CUBIC=iso             #iso = cubic, leaving it blank will create a rectangular prism.
-GROMACS=yes           #Generate .gro and .top files using acpype.py? (yes, no)
-NEUTRALIZE=no         #Neutralize the charge by adding counterions Na+ or Cl-. (yes, no)
-DISULFIDE=no          #Are there disulfide bonds in the solute. (yes, no). 
-SSBOND_A_1=100        #manually input all disulfide bonds with a line for each atom. SSBOND_B_1=120
-SSBOND_A_2=25         #(SSBOND_A_#=RESIDUE_NUM, SSBOND_B_#=RESIDUE_NUM). 
-SSBOND_B_2=40	      #This means that the SSBOND is between RESIDUE_NUM and $RESIDUE_NUM.#
-PERCENT=100  	      #% IL (in DES and IL) or organic
+MD=yes			#yes or no ; choose yes if no MD files are present
+Analysis=yes		#yes or no ; choose yes if wanting analysis on MD
+nvt_production=yes	#yes or no ; NVT ensemble
+npt_production=no	#yes or no ; NPT ensemble
+nvt_length=1000000   	#1ns (production NVT MD length)
+npt_length=1000000	#1ns (production NPT MD length)

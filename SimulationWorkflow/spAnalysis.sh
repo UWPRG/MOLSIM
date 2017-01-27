@@ -2,31 +2,30 @@ echo "starting spEqAnalysis"
 #*****************************************************************
 #prep for the right direcotry depending on NPT or NVT
 if [ "$nvt_production" == "yes" ] ; then
-  cd ${ILhome}/${LABEL}/NVT
+  cd ${PROJROOT}/NVT
 elif [ "$npt_production" == "yes" ] ; then
-  cd ${ILhome}/${LABEL}/NPT
+  cd ${PROJROOT}/NPT
 fi
-if [ ! -d ${ILhome}/analysis ] ; then
-  mkdir ${ILhome}/analysis
+if [ ! -d ${PROJROOT}/analysis ] ; then
+  mkdir ${PROJROOT}/analysis
 fi
 cp $SANDBOX/GROMACS.pbs .
-cp $SETUP/topol.top .
+cp $SANDBOX/topol.top .
 #*****************************************************************
 #heat capacity   
-if [ ! -f ${LABEL}.HeatCapacity.txt ] ; then 	#nmol grabs the correct amount of molecules for g_energy
-nmol=`tail -2 ${LABEL}.gro | head -1 | awk '{print $1}' | sed "s/[[:alpha:].-]/ /g" | awk '{print $1}'`
-echo "calculating heat capacity for ${LABEL}" 
-  echo 10 11 12 13 14 0 | gmx_8c energy -f ${LABEL}.edr -driftcorr -fluct_props -nmol ${nmol} >> ${LABEL}.HeatCapacity.txt
+if [ ! -f heatcapacity.txt ] ; then 	#nmol grabs the correct amount of molecules for g_energy
+  nmol=`tail -2 conf.gro | head -1 | awk '{print $1}' | sed "s/[[:alpha:].-]/ /g" | awk '{print $1}'`
+  echo "calculating heat capacity for ${name}" 
+  echo 8 6 0 | gmx_8c energy -f ener.edr -driftcorr -fluct_props -nmol ${nmol} >> temp
+  grep -i 'Heat capacity' temp | awk '{print $8}' >> heatcapacity.txt
   rm energy.xvg
-  cp ${LABEL}.HeatCapacity.txt ${ILhome}/analysis/
+  rm temp
 fi
 #*****************************************************************
 #temperature
-if [ ! -f ${LABEL}.Temp.xvg ] ; then
-echo "calculating temperature for ${LABEL}" 
-  echo gmx_8c energy -f ${LABEL}.edr -o ${LABEL}.Temp.xvg
-  rm energy.xvg
-  cp ${LABEL}.Cp ${ILhome}/analysis/
+if [ ! -f temperature.xvg ] ; then
+  echo "calculating temperature for ${name}" 
+  echo 8 0 | gmx_8c energy -f ener.edr -o temperature.xvg
 fi
 #*****************************************************************
 echo "analysis complete"

@@ -9,14 +9,4 @@ if [ ! -d $MYROOT/${name} ] ; then
   mkdir $MYROOT/${name}
 fi
 PROJROOT=$MYROOT/${name}
-PROPERTIES=$MYROOT/properties
-STRUCTURES=$MYROOT/structures
 SANDBOX=$MYROOT
-if [ ! -d $PROJROOT/boxmaker ] ; then
-  mkdir $PROJROOT/boxmaker 
-fi
-if [ ! -d $PROJROOT/production_md ] ; then
-  mkdir $PROJROOT/production_md
-fi
-SETUP=$PROJROOT/boxmaker
-ILhome=$PROJROOT/production_md
