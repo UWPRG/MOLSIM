@@ -6,9 +6,6 @@ if [ "$nvt_production" == "yes" ] ; then
 elif [ "$npt_production" == "yes" ] ; then
   cd ${PROJROOT}/NPT
 fi
-if [ ! -d ${PROJROOT}/analysis ] ; then
-  mkdir ${PROJROOT}/analysis
-fi
 cp $SANDBOX/GROMACS.pbs .
 cp $SANDBOX/topol.top .
 #*****************************************************************
