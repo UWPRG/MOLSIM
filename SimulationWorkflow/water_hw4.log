@@ -1,0 +1,27 @@
+sourcing water_hw4.inp
+ 
+beginning water_hw4 runs
+#!/bin/bash
+###*****************************************************************
+### INPUT FILE TO GENERATE SYSTEM, ENERGY MINIMIZE, EQUILIBRATE,
+### AND EXECUTE PRODUCTION MD RUN AND ANALYSES
+###*****************************************************************
+name=water_hw4
+### MAIN PARAMETERS 
+Temp=350
+MD=yes			#yes or no ; choose yes if no MD files are present
+Analysis=yes		#yes or no ; choose yes if wanting analysis on MD
+nvt_production=no	#yes or no ; NVT ensemble
+npt_production=yes	#yes or no ; NPT ensemble
+nvt_length=1000000   	#1ns (production NVT MD length)
+npt_length=1000000	#1ns (production NPT MD length)
+made mini directory
+initiating energy minimization for water_hw4
+Analysing residue names:
+There are:   884      Water residues
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 28x28x28, spacing 0.107 0.107 0.107
+This run will generate roughly 0 Mb of data
+5362835.mgmt2.hyak.local
+/suppscr/pfaendtner/wesley/MOLSIM/SimulationWorkFlow/HW4/water_hw4
+waiting for minimization to complete
