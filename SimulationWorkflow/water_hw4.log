@@ -1,0 +1,45 @@
+sourcing water_hw4.inp
+ 
+beginning water_hw4 runs
+#!/bin/bash
+###*****************************************************************
+### INPUT FILE TO GENERATE SYSTEM, ENERGY MINIMIZE, EQUILIBRATE,
+### AND EXECUTE PRODUCTION MD RUN AND ANALYSES
+###*****************************************************************
+name=water_hw4
+### MAIN PARAMETERS 
+Temp=350
+MD=yes			#yes or no ; choose yes if no MD files are present
+Analysis=yes		#yes or no ; choose yes if wanting analysis on MD
+nvt_production=no	#yes or no ; NVT ensemble
+npt_production=yes	#yes or no ; NPT ensemble
+nvt_length=1000000   	#1ns (production NVT MD length)
+npt_length=1000000	#1ns (production NPT MD length)
+made mini directory
+initiating energy minimization for water_hw4
+Analysing residue names:
+There are:   884      Water residues
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 28x28x28, spacing 0.107 0.107 0.107
+This run will generate roughly 0 Mb of data
+5362835.mgmt2.hyak.local
+/suppscr/pfaendtner/wesley/MOLSIM/SimulationWorkFlow/HW4/water_hw4
+waiting for minimization to complete
+waiting for minimization to complete
+minimization complete... moving forward
+made /suppscr/pfaendtner/wesley/MOLSIM/SimulationWorkFlow/HW4/water_hw4/equilibrate directory
+creating new files: equilibrate/
+turning H bonds into constraints...
+Analysing residue names:
+There are:   884      Water residues
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 350 K
+Calculated rlist for 1x1 atom pair-list as 1.014 nm, buffer size 0.014 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.000 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 28x28x28, spacing 0.107 0.107 0.107
+This run will generate roughly 2 Mb of data
+5362885.mgmt2.hyak.local
+/suppscr/pfaendtner/wesley/MOLSIM/SimulationWorkFlow/HW4/water_hw4
+equilibration setup for water_hw4 file complete
+waiting for equilibration to complete
