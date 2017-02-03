@@ -1,0 +1,73 @@
+# This file was created Wed Feb  1 22:35:09 2017
+# Created by:
+#                  :-) GROMACS - gmx density, VERSION 5.1.2 (-:
+# 
+# Executable:   /gscratch/pfaendtner/codes/gromacs-5.1.2/inst/bin/gmx_8c
+# Data prefix:  /gscratch/pfaendtner/codes/gromacs-5.1.2/inst
+# Command line:
+#   gmx_8c density
+# gmx density is part of G R O M A C S:
+#
+# Getting the Right Output Means no Artefacts in Calculating Stuff
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Density (kg m\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "System"
+   0.0300595          1085.15
+   0.0901785          698.511
+    0.150297          966.678
+    0.210416          1120.61
+    0.270535          1033.24
+    0.330655           970.79
+    0.390774          959.612
+    0.450893          1046.22
+    0.511011          801.564
+    0.571131          1073.84
+    0.631249          952.285
+    0.691369          858.614
+    0.751487          958.583
+    0.811606             1029
+    0.871725          1132.05
+    0.931844          874.933
+    0.991964          940.209
+     1.05208          971.818
+      1.1122          1064.59
+     1.17232          862.727
+     1.23244          972.846
+     1.29256          938.152
+     1.35268          1219.82
+      1.4128          903.459
+     1.47292          918.749
+     1.53303          780.105
+     1.59315          1166.62
+     1.65327           1102.5
+     1.71339          1006.51
+     1.77351           850.52
+     1.83363          1139.12
+     1.89375          916.824
+     1.95387          1182.93
+     2.01399           798.48
+     2.07411           934.04
+     2.13422          953.443
+     2.19434          985.053
+     2.25446          1021.93
+     2.31458          859.512
+      2.3747             1029
+     2.43482          1014.61
+     2.49494           808.63
+     2.55506          1051.36
+     2.61518          898.449
+      2.6753          1048.27
+     2.73541          1022.96
+     2.79553          1116.63
+     2.85565          752.477
+     2.91577           845.38
+     2.97589          1091.06
