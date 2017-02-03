@@ -1,0 +1,35 @@
+# This file was created Thu Feb  2 23:19:41 2017
+# Created by:
+#                   :-) GROMACS - gmx hbond, VERSION 5.1.2 (-:
+# 
+# Executable:   /gscratch/pfaendtner/cdf6gc/codes/PRG_USE/gromacs-5.1.2/bin/bin/gmx
+# Data prefix:  /gscratch/pfaendtner/cdf6gc/codes/PRG_USE/gromacs-5.1.2/bin
+# Command line:
+#   gmx hbond -f traj_comp.xtc -s topol.tpr -num hbnum350.xvg
+# gmx hbond is part of G R O M A C S:
+#
+# God Rules Over Mankind, Animals, Cosmos and Such
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+         0        1339        3003
+       100        1316        2990
+       200        1362        3038
+       300        1347        3051
+       400        1363        2957
+       500        1338        3014
+       600        1379        2995
+       700        1366        3030
+       800        1343        3055
+       900        1340        3020
+      1000        1337        2963

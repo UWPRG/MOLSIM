@@ -1,0 +1,35 @@
+# This file was created Thu Feb  2 23:52:22 2017
+# Created by:
+#                   :-) GROMACS - gmx hbond, VERSION 5.1.2 (-:
+# 
+# Executable:   /gscratch/pfaendtner/cdf6gc/codes/PRG_USE/gromacs-5.1.2/bin/bin/gmx
+# Data prefix:  /gscratch/pfaendtner/cdf6gc/codes/PRG_USE/gromacs-5.1.2/bin
+# Command line:
+#   gmx hbond -f traj_comp.xtc -s topol.tpr -num hbnum400.xvg
+# gmx hbond is part of G R O M A C S:
+#
+# Great Red Owns Many ACres of Sand 
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+         0        1218        2860
+       100        1219        2913
+       200        1234        2880
+       300        1234        2844
+       400        1201        2995
+       500        1250        2930
+       600        1224        2964
+       700        1207        2889
+       800        1206        2942
+       900        1229        2935
+      1000        1204        3002
