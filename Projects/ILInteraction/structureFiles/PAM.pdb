@@ -1,0 +1,40 @@
+ATOM      1  C1  PAM     1      -2.106  -0.794   0.079
+ATOM      2  H1  PAM     1      -1.870  -1.823   0.340
+ATOM      3  H2  PAM     1      -3.187  -0.713   0.120
+ATOM      4  C2  PAM     1      -1.530   0.144   1.147
+ATOM      5  H3  PAM     1      -1.779   1.173   0.896
+ATOM      6  H4  PAM     1      -2.010  -0.071   2.098
+ATOM      7  C3  PAM     1      -0.010   0.020   1.320
+ATOM      8  H5  PAM     1       0.495   0.294   0.398
+ATOM      9  H6  PAM     1       0.247  -1.015   1.536
+ATOM     10  C4  PAM     1       0.481   0.913   2.449
+ATOM     11  H7  PAM     1       0.059   0.641   3.406
+ATOM     12  H8  PAM     1       0.288   1.959   2.262
+ATOM     13  N1  PAM     1       1.988   0.788   2.606
+ATOM     14  H9  PAM     1       2.341   1.372   3.352
+ATOM     15  H10 PAM     1       2.257  -0.164   2.813
+ATOM     16  H11 PAM     1       2.468   1.056   1.758
+ATOM     17  C5  PAM     1      -1.639  -0.499  -1.347
+ATOM     18  H12 PAM     1      -0.574  -0.667  -1.476
+ATOM     19  H13 PAM     1      -2.150  -1.143  -2.052
+ATOM     20  H14 PAM     1      -1.853   0.529  -1.625
+CONECT    1    2    3    4   17
+CONECT    2    1
+CONECT    3    1
+CONECT    4    1    5    6    7
+CONECT    5    4
+CONECT    6    4
+CONECT    7    4    8    9   10
+CONECT    8    7
+CONECT    9    7
+CONECT   10    7   11   12   13
+CONECT   11   10
+CONECT   12   10
+CONECT   13   10   14   15   16
+CONECT   14   13
+CONECT   15   13
+CONECT   16   13
+CONECT   17    1   18   19   20
+CONECT   18   17
+CONECT   19   17
+CONECT   20   17
