@@ -1,0 +1,99 @@
+!!index array str
+ "EAM"
+!entry.EAM.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
+ "C1" "c3" 0 1 131072 1 6 -0.268482
+ "H1" "hc" 0 1 131072 2 1 0.101277
+ "H2" "hc" 0 1 131072 3 1 0.101277
+ "H3" "hc" 0 1 131072 4 1 0.101277
+ "C2" "c3" 0 1 131072 5 6 0.190247
+ "H4" "hx" 0 1 131072 6 1 0.0579144
+ "H5" "hx" 0 1 131072 7 1 0.0579144
+ "N1" "n4" 0 1 131072 8 7 -0.410098
+ "H6" "hn" 0 1 131072 9 1 0.289558
+ "H7" "hn" 0 1 131072 10 1 0.289558
+ "H8" "hn" 0 1 131072 11 1 0.289558
+!entry.EAM.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
+ "C1" "c3" 0 -1 0.0
+ "H1" "hc" 0 -1 0.0
+ "H2" "hc" 0 -1 0.0
+ "H3" "hc" 0 -1 0.0
+ "C2" "c3" 0 -1 0.0
+ "H4" "hx" 0 -1 0.0
+ "H5" "hx" 0 -1 0.0
+ "N1" "n4" 0 -1 0.0
+ "H6" "hn" 0 -1 0.0
+ "H7" "hn" 0 -1 0.0
+ "H8" "hn" 0 -1 0.0
+!entry.EAM.unit.boundbox array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.EAM.unit.childsequence single int
+ 2
+!entry.EAM.unit.connect array int
+ 0
+ 0
+!entry.EAM.unit.connectivity table  int atom1x  int atom2x  int flags
+ 1 2 1
+ 1 3 1
+ 1 4 1
+ 1 5 1
+ 5 6 1
+ 5 7 1
+ 5 8 1
+ 8 9 1
+ 8 10 1
+ 8 11 1
+!entry.EAM.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
+ "U" 0 "R" 1
+ "R" 1 "A" 1
+ "R" 1 "A" 2
+ "R" 1 "A" 3
+ "R" 1 "A" 4
+ "R" 1 "A" 5
+ "R" 1 "A" 6
+ "R" 1 "A" 7
+ "R" 1 "A" 8
+ "R" 1 "A" 9
+ "R" 1 "A" 10
+ "R" 1 "A" 11
+!entry.EAM.unit.name single str
+ "EAM"
+!entry.EAM.unit.positions table  dbl x  dbl y  dbl z
+ 0.377000 0.689000 -0.008000
+ 0.974000 -0.215000 0.040000
+ 0.673000 1.233000 -0.896000
+ -0.667000 0.420000 -0.119000
+ 0.604000 1.576000 1.203000
+ 1.642000 1.844000 1.331000
+ 0.008000 2.476000 1.174000
+ 0.199000 0.848000 2.473000
+ 0.735000 -0.001000 2.598000
+ 0.341000 1.418000 3.296000
+ -0.777000 0.584000 2.453000
+!entry.EAM.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
+ 0 0 0 0 0 0
+!entry.EAM.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
+ "EAM" 1 12 1 "?" 0
+!entry.EAM.unit.residuesPdbSequenceNumber array int
+ 0
+!entry.EAM.unit.solventcap array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.EAM.unit.velocities table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0

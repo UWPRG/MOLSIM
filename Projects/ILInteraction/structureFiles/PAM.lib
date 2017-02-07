@@ -1,0 +1,153 @@
+!!index array str
+ "PAM"
+!entry.PAM.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
+ "C1" "c3" 0 1 131072 1 6 0.106752
+ "H1" "hc" 0 1 131072 2 1 0.0052704
+ "H2" "hc" 0 1 131072 3 1 0.0052704
+ "C2" "c3" 0 1 131072 4 6 -0.129934
+ "H3" "hc" 0 1 131072 5 1 0.0495032
+ "H4" "hc" 0 1 131072 6 1 0.0495032
+ "C3" "c3" 0 1 131072 7 6 -0.067604
+ "H5" "hc" 0 1 131072 8 1 0.0399864
+ "H6" "hc" 0 1 131072 9 1 0.0399864
+ "C4" "c3" 0 1 131072 10 6 0.12949
+ "H7" "hx" 0 1 131072 11 1 0.0596432
+ "H8" "hx" 0 1 131072 12 1 0.0596432
+ "N1" "n4" 0 1 131072 13 7 -0.378858
+ "H9" "hn" 0 1 131072 14 1 0.281779
+ "H10" "hn" 0 1 131072 15 1 0.281779
+ "H11" "hn" 0 1 131072 16 1 0.281779
+ "C5" "c3" 0 1 131072 17 6 -0.127688
+ "H12" "hc" 0 1 131072 18 1 0.0378984
+ "H13" "hc" 0 1 131072 19 1 0.0378984
+ "H14" "hc" 0 1 131072 20 1 0.0378984
+!entry.PAM.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
+ "C1" "c3" 0 -1 0.0
+ "H1" "hc" 0 -1 0.0
+ "H2" "hc" 0 -1 0.0
+ "C2" "c3" 0 -1 0.0
+ "H3" "hc" 0 -1 0.0
+ "H4" "hc" 0 -1 0.0
+ "C3" "c3" 0 -1 0.0
+ "H5" "hc" 0 -1 0.0
+ "H6" "hc" 0 -1 0.0
+ "C4" "c3" 0 -1 0.0
+ "H7" "hx" 0 -1 0.0
+ "H8" "hx" 0 -1 0.0
+ "N1" "n4" 0 -1 0.0
+ "H9" "hn" 0 -1 0.0
+ "H10" "hn" 0 -1 0.0
+ "H11" "hn" 0 -1 0.0
+ "C5" "c3" 0 -1 0.0
+ "H12" "hc" 0 -1 0.0
+ "H13" "hc" 0 -1 0.0
+ "H14" "hc" 0 -1 0.0
+!entry.PAM.unit.boundbox array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.PAM.unit.childsequence single int
+ 2
+!entry.PAM.unit.connect array int
+ 0
+ 0
+!entry.PAM.unit.connectivity table  int atom1x  int atom2x  int flags
+ 1 2 1
+ 1 3 1
+ 1 4 1
+ 1 17 1
+ 4 5 1
+ 4 6 1
+ 4 7 1
+ 7 8 1
+ 7 9 1
+ 7 10 1
+ 10 11 1
+ 10 12 1
+ 10 13 1
+ 13 14 1
+ 13 15 1
+ 13 16 1
+ 17 18 1
+ 17 19 1
+ 17 20 1
+!entry.PAM.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
+ "U" 0 "R" 1
+ "R" 1 "A" 1
+ "R" 1 "A" 2
+ "R" 1 "A" 3
+ "R" 1 "A" 4
+ "R" 1 "A" 5
+ "R" 1 "A" 6
+ "R" 1 "A" 7
+ "R" 1 "A" 8
+ "R" 1 "A" 9
+ "R" 1 "A" 10
+ "R" 1 "A" 11
+ "R" 1 "A" 12
+ "R" 1 "A" 13
+ "R" 1 "A" 14
+ "R" 1 "A" 15
+ "R" 1 "A" 16
+ "R" 1 "A" 17
+ "R" 1 "A" 18
+ "R" 1 "A" 19
+ "R" 1 "A" 20
+!entry.PAM.unit.name single str
+ "PAM"
+!entry.PAM.unit.positions table  dbl x  dbl y  dbl z
+ -2.106000 -0.794000 0.079000
+ -1.870000 -1.823000 0.340000
+ -3.187000 -0.713000 0.120000
+ -1.530000 0.144000 1.147000
+ -1.779000 1.173000 0.896000
+ -2.010000 -0.071000 2.098000
+ -0.010000 0.020000 1.320000
+ 0.495000 0.294000 0.398000
+ 0.247000 -1.015000 1.536000
+ 0.481000 0.913000 2.449000
+ 0.059000 0.641000 3.406000
+ 0.288000 1.959000 2.262000
+ 1.988000 0.788000 2.606000
+ 2.341000 1.372000 3.352000
+ 2.257000 -0.164000 2.813000
+ 2.468000 1.056000 1.758000
+ -1.639000 -0.499000 -1.347000
+ -0.574000 -0.667000 -1.476000
+ -2.150000 -1.143000 -2.052000
+ -1.853000 0.529000 -1.625000
+!entry.PAM.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
+ 0 0 0 0 0 0
+!entry.PAM.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
+ "PAM" 1 21 1 "?" 0
+!entry.PAM.unit.residuesPdbSequenceNumber array int
+ 0
+!entry.PAM.unit.solventcap array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.PAM.unit.velocities table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0

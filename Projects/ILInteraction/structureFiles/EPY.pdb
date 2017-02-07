@@ -1,0 +1,42 @@
+ATOM      1  C1  EPY     1      -2.743  -0.659  -0.005
+ATOM      2  C2  EPY     1      -1.375  -0.776  -0.086
+ATOM      3  C3  EPY     1      -0.624   0.324   0.331
+ATOM      4  C4  EPY     1      -1.247   1.466   0.800
+ATOM      5  C5  EPY     1      -2.620   1.500   0.849
+ATOM      6  N1  EPY     1      -3.340   0.451   0.453
+ATOM      7  H1  EPY     1       0.449   0.281   0.289
+ATOM      8  H2  EPY     1      -3.398  -1.454  -0.302
+ATOM      9  H3  EPY     1      -0.684   2.318   1.126
+ATOM     10  H4  EPY     1      -3.164   2.353   1.203
+ATOM     11  C6  EPY     1      -0.723  -2.037  -0.599
+ATOM     12  H5  EPY     1      -0.085  -2.471   0.161
+ATOM     13  H6  EPY     1      -1.461  -2.777  -0.881
+ATOM     14  H7  EPY     1      -0.112  -1.823  -1.468
+ATOM     15  C7  EPY     1      -4.830   0.523   0.476
+ATOM     16  H8  EPY     1      -5.189  -0.469   0.704
+ATOM     17  H9  EPY     1      -5.099   1.167   1.300
+ATOM     18  C8  EPY     1      -5.389   1.036  -0.844
+ATOM     19  H10 EPY     1      -6.470   1.072  -0.779
+ATOM     20  H11 EPY     1      -5.031   2.035  -1.064
+ATOM     21  H12 EPY     1      -5.122   0.384  -1.668
+CONECT    1    2    6    8
+CONECT    2    1    3   11
+CONECT    3    2    4    7
+CONECT    4    3    5    9
+CONECT    5    4    6   10
+CONECT    6    1    5   15
+CONECT    7    3
+CONECT    8    1
+CONECT    9    4
+CONECT   10    5
+CONECT   11    2   12   13   14
+CONECT   12   11
+CONECT   13   11
+CONECT   14   11
+CONECT   15    6   16   17   18
+CONECT   16   15
+CONECT   17   15
+CONECT   18   15   19   20   21
+CONECT   19   18
+CONECT   20   18
+CONECT   21   18

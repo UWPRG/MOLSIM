@@ -1,0 +1,16 @@
+ATOM      1  C1  URE     1       0.505   0.342   0.050
+ATOM      2  O1  URE     1      -0.096  -0.152  -0.867
+ATOM      3  N1  URE     1      -0.124   0.911   1.113
+ATOM      4  N2  URE     1       1.864   0.374   0.099
+ATOM      5  H1  URE     1      -1.117   0.911   1.108
+ATOM      6  H2  URE     1       0.351   1.332   1.875
+ATOM      7  H3  URE     1       2.357  -0.039  -0.658
+ATOM      8  H4  URE     1       2.380   0.766   0.850
+CONECT    1    2    3    4
+CONECT    2    1
+CONECT    3    1    5    6
+CONECT    4    1    7    8
+CONECT    5    3
+CONECT    6    3
+CONECT    7    4
+CONECT    8    4

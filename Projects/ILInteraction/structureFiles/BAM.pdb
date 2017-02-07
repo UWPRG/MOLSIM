@@ -1,0 +1,34 @@
+ATOM      1  C1  BAM     1      -2.138  -0.840   0.101
+ATOM      2  H1  BAM     1      -1.905  -1.877   0.320
+ATOM      3  H2  BAM     1      -1.723  -0.598  -0.872
+ATOM      4  H3  BAM     1      -3.216  -0.752   0.032
+ATOM      5  C2  BAM     1      -1.596   0.091   1.184
+ATOM      6  H4  BAM     1      -1.874   1.117   0.956
+ATOM      7  H5  BAM     1      -2.054  -0.153   2.138
+ATOM      8  C3  BAM     1      -0.071  -0.004   1.314
+ATOM      9  H6  BAM     1       0.392   0.247   0.362
+ATOM     10  H7  BAM     1       0.211  -1.027   1.550
+ATOM     11  C4  BAM     1       0.450   0.931   2.397
+ATOM     12  H8  BAM     1       0.061   0.688   3.375
+ATOM     13  H9  BAM     1       0.242   1.969   2.181
+ATOM     14  N1  BAM     1       1.961   0.821   2.509
+ATOM     15  H10 BAM     1       2.334   1.433   3.223
+ATOM     16  H11 BAM     1       2.244  -0.122   2.740
+ATOM     17  H12 BAM     1       2.413   1.062   1.637
+CONECT    1    2    3    4    5
+CONECT    2    1
+CONECT    3    1
+CONECT    4    1
+CONECT    5    1    6    7    8
+CONECT    6    5
+CONECT    7    5
+CONECT    8    5    9   10   11
+CONECT    9    8
+CONECT   10    8
+CONECT   11    8   12   13   14
+CONECT   12   11
+CONECT   13   11
+CONECT   14   11   15   16   17
+CONECT   15   14
+CONECT   16   14
+CONECT   17   14
