@@ -1,0 +1,62 @@
+        Read all the instructions below before start the homework.
+        
+        If you need help, contact me by Wednesday, 2/22, using the class channel. Again, before that, make sure you read all instruction.
+        I'm not going to be available Thursday, 2/23.
+
+	Homework:
+	
+	1) In this part of the HW you will calculate bond distances using different levels of theory and basis sets.
+
+ 	Download and install Avogadro on your local machine. (http://avogadro.cc/)
+	
+	It's straightforward to draw molecules in Avogadro. Play around and have fun with it. There are tutorials on the website.
+ 
+        You should draw the 4 molecules given in the .ppt file and compare the indicated bond distances from your calculation (see below) with the experimental values.
+
+        In Avogadro you can perform an optimization of the structure you drew. Use GAFF and UFF and measure the bond distances.
+	Use the conjugate gradient algorithm.
+	
+	Then, you can export a Gaussian input file. Go to Extensions and select Gaussian. For calculation choose Geometry Optimization. Format Cartesian. Output standard.
+        The number of processors should be 8.	
+        If there aren't any 8-cores nodes available when you start your calculation try 16-cores nodes. The .pbs file should be modified accordingly.  
+        For charge and multiplicity I let you figure out the corrects values for each molecule by yourselves.
+
+        You should perform an optimization using B3LYP, MP2, CCSD and M062X (which is not listed in Avogadro, but it's extremely easy to modify it in your .com file) combine each 4 methods with the
+        5 basis set indicated in Avogadro (20 calculations for each molecule = 80 calculations in total).
+        Once you have generated and exported all files for the different combinations copy them and the .pbs file to Hyak. It's a good practice to organize each series of calculations in folders. 
+	(Tip, after generating some of them you can easily see that a script would do the job, as the main part of the files, the coordinates of each structure,
+        are not changed only the level of the theory and basis set).
+
+	You should obviously change the name of your .com files in the .pbs. 
+	Once the calculations are successfully finished (figure it out) copy the .log files back to your local machine.
+
+        (Avogadro can read Gaussian output files but I want you to use GaussView. After class I will come and help with its installation for those who do not have it yet.)
+
+        Open the .log file in GaussView and measure the distances. 
+	You should check the "Read Intermediate Geometries" option (this will be necessary for the next part)	        
+        Compare with the given experimental references. Organize the values in tables. One table per basis set (5 tables). The values coming from force fields should be only in the STO-3G 
+        basis set table.
+        Your table should also include the calculation time. 
+
+        Questions:
+	What level of theory and basis set gave the best values, compared with the experimental one?
+        What was the fastest calculation?
+
+        2)  Let's learn some gnuplot.
+
+	With GaussView and using your .log files, click in results then optimization. Export the data of the first graph (Total Energy) that appeared to an external file.
+
+        Plot your proper graphs using gnuplot. Print screens will not be accepted. You can save your graph from gnuplot in several different formats. 
+        The one and only Prof. Google knows how to do it. Ask him. 
+
+        Also, ask him how to label your axes (energy should be in kcal/mol), choose nice color other them the ones by default, change thickness and give titles to your curves. 
+
+	Plot a figure for each basis set with a curve per method (5 figures, 4 curves per figure). Use relative energies. 
+	Tip: You can transform from Hartree to kcal/mol and have relative energies using gnuplot commands only.
+        
+
+        3) Prepare a list of all acronyms used in this HW and their meanings (Force fields, XC functionals, and basis sets)
+	   Although I want the simple definition e.g. what LANL2DZ stands for, I'm expecting short paragraphs that your experimentalist (and computational scientist using FF) friends will   understand. 
+           	   	
+           Turn in everything in a Python notebook. 
+
