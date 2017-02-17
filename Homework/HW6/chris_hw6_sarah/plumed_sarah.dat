@@ -1,0 +1,11 @@
+#This is a template for evaluating simple CVs in plumed
+#ACTION LABEL ARGUMENTS OPTIONS
+#Calculate torsion angle between atoms 5,7,9,15
+
+TORSION LABEL=phi ATOMS=5,7,9,15
+
+#You can specify which variables are printed out (ARG). For printing everything do ARG=* and at what frequency they are printed out STRIDE=
+# In this case the Torsion angle psi_again will not be printed out.
+PRINT ARG=phi STRIDE=1 FILE=PLUMED_PHI
+
+#FILE is the name of the file created with the outputs
