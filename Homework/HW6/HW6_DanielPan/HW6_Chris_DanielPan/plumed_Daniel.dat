@@ -1,0 +1,6 @@
+TORSION ...
+LABEL=phi
+ATOMS=5,7,9,15
+... TORSION
+
+PRINT ARG=* STRIDE=1 FILE=phi_Daniel
