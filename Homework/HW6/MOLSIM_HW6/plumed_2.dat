@@ -1,0 +1,17 @@
+#Here we calculate the phi torsion angle in alanine dipeptide:
+#
+TORSION LABEL=phi ATOMS=5,7,9,15
+
+# Additionally, PLUMED has a function called MATHEVAL which lets you define your own CVs!
+#
+DISTANCE LABEL=d1 ATOMS=5,7 COMPONENTS
+DISTANCE LABEL=d2 ATOMS=9,15 COMPONENTS
+MATHEVAL ...
+  LABEL=dihedral
+  ARG=d1.x,d1.y,d1.z,d2.x,d2.y,d2.z
+  VAR=ax,ay,az,bx,by,bz
+  FUNC=acos((ax*bx+ay*by+az*bz)/sqrt((ax*ax+ay*ay+az*az)*(bx*bx+by*by+bz*bz))
+  PERIODIC=NO
+... MATHEVAL
+
+PRINT ARG=phi,dihedral STRIDE=1 FILE=PLUMED_PHI_2
