@@ -1,0 +1,223 @@
+#Here we calculate the psi torsion angle in alanine dipeptide:
+TORSION LABEL=phi ATOMS=5,7,9,15
+
+DISTANCE LABEL=b1 ATOMS=7,5 COMPONENTS
+
+DISTANCE LABEL=b2 ATOMS=9,7 COMPONENTS
+
+DISTANCE LABEL=b3 ATOMS=15,9 COMPONENTS
+
+### n1 calculation
+
+MATHEVAL ...
+ARG=b1.y,b1.z,b2.y,b2.z
+VAR=y1,z1,y2,z2
+PERIODIC=NO
+FUNC=(y1*z2)-(z1*y2)
+LABEL=N1x
+... MATHEVAL
+
+MATHEVAL ...
+ARG=b1.x,b1.z,b2.x,b2.z
+VAR=x1,z1,x2,z2
+PERIODIC=NO
+FUNC=-((x1*z2)-(z1*x2))
+LABEL=N1y
+... MATHEVAL
+
+MATHEVAL ...
+ARG=b1.x,b1.y,b2.x,b2.y
+VAR=x1,y1,x2,y2
+PERIODIC=NO
+FUNC=(x1*y2)-(x2*y1)
+LABEL=N1z
+... MATHEVAL
+
+MATHEVAL ...
+ARG=N1x,N1y,N1z
+VAR=x,y,z
+PERIODIC=NO
+FUNC=sqrt(x*x+y*y+z*z)
+LABEL=N1mag
+... MATHEVAL
+
+
+MATHEVAL ...
+ARG=N1x,N1mag
+VAR=x,mag
+PERIODIC=NO
+FUNC=x/mag
+LABEL=n1x
+... MATHEVAL
+
+MATHEVAL ...
+ARG=N1y,N1mag
+VAR=y,mag
+PERIODIC=NO
+FUNC=y/mag
+LABEL=n1y
+... MATHEVAL
+
+MATHEVAL ...
+ARG=N1z,N1mag
+VAR=z,mag
+PERIODIC=NO
+FUNC=z/mag
+LABEL=n1z
+... MATHEVAL
+
+### n2 calculation
+
+MATHEVAL ...
+ARG=b2.y,b2.z,b3.y,b3.z
+VAR=y2,z2,y3,z3
+PERIODIC=NO
+FUNC=(y2*z3)-(z2*y3)
+LABEL=N2x
+... MATHEVAL
+
+
+MATHEVAL ...
+ARG=b2.x,b2.z,b3.x,b3.z
+VAR=x2,z2,x3,z3
+PERIODIC=NO
+FUNC=-((x2*z3)-(z2*x3))
+LABEL=N2y
+... MATHEVAL
+
+MATHEVAL ...
+ARG=b2.x,b2.y,b3.x,b3.y
+VAR=x2,y2,x3,y3
+PERIODIC=NO
+FUNC=(x2*y3)-(x3*y2)
+LABEL=N2z
+... MATHEVAL
+
+MATHEVAL ...
+ARG=N2x,N2y,N2z
+VAR=x,y,z
+PERIODIC=NO
+FUNC=sqrt(x*x+y*y+z*z)
+LABEL=N2mag
+... MATHEVAL
+
+
+MATHEVAL ...
+ARG=N2x,N2mag
+VAR=x,mag
+PERIODIC=NO
+FUNC=x/mag
+LABEL=n2x
+... MATHEVAL
+
+MATHEVAL ...
+ARG=N2y,N2mag
+VAR=y,mag
+PERIODIC=NO
+FUNC=y/mag
+LABEL=n2y
+... MATHEVAL
+
+MATHEVAL ...
+ARG=N2z,N2mag
+VAR=z,mag
+PERIODIC=NO
+FUNC=z/mag
+LABEL=n2z
+... MATHEVAL
+
+### b2 unit calculation
+
+MATHEVAL ...
+ARG=b2.x,b2.y,b2.z
+VAR=x,y,z
+PERIODIC=NO
+FUNC=sqrt((x*x)+(y*y)+(z*z))
+LABEL=b2mag
+... MATHEVAL
+
+MATHEVAL ...
+ARG=b2.x,b2mag
+VAR=x,mag
+PERIODIC=NO
+FUNC=x/mag
+LABEL=b2xunit
+... MATHEVAL
+
+MATHEVAL ...
+ARG=b2.y,b2mag
+VAR=y,mag
+PERIODIC=NO
+FUNC=y/mag
+LABEL=b2yunit
+... MATHEVAL
+
+MATHEVAL ...
+ARG=b2.z,b2mag
+VAR=z,mag
+PERIODIC=NO
+FUNC=z/mag
+LABEL=b2zunit
+... MATHEVAL
+
+### m1 calculation
+
+MATHEVAL ...
+ARG=n1y,n1z,b2yunit,b2zunit
+VAR=y2,z2,y3,z3
+PERIODIC=NO
+FUNC=(y2*z3)-(z2*y3)
+LABEL=m1x
+... MATHEVAL
+
+
+MATHEVAL ...
+ARG=n1x,n1z,b2xunit,b2zunit
+VAR=x2,z2,x3,z3
+PERIODIC=NO
+FUNC=-((x2*z3)-(z2*x3))
+LABEL=m1y
+... MATHEVAL
+
+MATHEVAL ...
+ARG=n1x,n1y,b2xunit,b2yunit
+VAR=x2,y2,x3,y3
+PERIODIC=NO
+FUNC=(x2*y3)-(x3*y2)
+LABEL=m1z
+... MATHEVAL
+
+### x calculation
+
+MATHEVAL ...
+ARG=n1x,n1y,n1z,n2x,n2y,n2z
+VAR=x1,y1,z1,x2,y2,z2
+PERIODIC=NO
+FUNC=(x1*x2)+(y1*y2)+(z1*z2)
+LABEL=x
+... MATHEVAL
+
+### y calculation
+
+MATHEVAL ...
+ARG=m1x,m1y,m1z,n2x,n2y,n2z
+VAR=x1,y1,z1,x2,y2,z2
+PERIODIC=NO
+FUNC=(x1*x2)+(y1*y2)+(z1*z2)
+LABEL=y
+... MATHEVAL
+
+### dihedral calculation
+
+MATHEVAL ...
+ARG=x,y
+VAR=x,y
+PERIODIC=NO
+FUNC=(atan(y/x)*step(x))+((atan(y/x)+3.14159265)*step(y)*step(-x))+((atan(y/x)-3.14159265)*step(-y)*step(-x))
+LABEL=dihedral
+... MATHEVAL
+
+### Print out the torsion angle calculated with plumed and matheval
+
+PRINT ARG=phi,dihedral STRIDE=1 FILE=PLUMED_PHI
+
