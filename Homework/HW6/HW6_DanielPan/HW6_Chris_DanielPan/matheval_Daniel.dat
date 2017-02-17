@@ -1,0 +1,29 @@
+DISTANCE LABEL=avec ATOMS=5,7 COMPONENTS
+DISTANCE LABEL=bvec ATOMS=7,9 COMPONENTS
+DISTANCE LABEL=cvec ATOMS=9,15 COMPONENTS
+
+n1x: MATHEVAL ARG=avec.y,avec.z,bvec.y,bvec.z VAR=ay,az,by,bz FUNC=ay*bz-az*by PERIODIC=NO
+n1y: MATHEVAL ARG=avec.x,avec.z,bvec.x,bvec.z VAR=ax,az,bx,bz FUNC=-(ax*bz-az*bx) PERIODIC=NO
+n1z: MATHEVAL ARG=avec.x,avec.y,bvec.x,bvec.y VAR=ax,ay,bx,by FUNC=ax*by-ay*bx PERIODIC=NO
+n2x: MATHEVAL ARG=bvec.y,bvec.z,cvec.y,cvec.z VAR=by,bz,cy,cz FUNC=by*cz-bz*cy PERIODIC=NO
+n2y: MATHEVAL ARG=bvec.x,bvec.z,cvec.x,cvec.z VAR=bx,bz,cx,cz FUNC=-(bx*cz-bz*cx) PERIODIC=NO
+n2z: MATHEVAL ARG=bvec.x,bvec.y,cvec.x,cvec.y VAR=bx,by,cx,cy FUNC=bx*cy-by*cx PERIODIC=NO
+
+m: MATHEVAL ARG=avec.x,avec.y,avec.z,n2x,n2y,n2z VAR=ax,ay,az,nx,ny,nz FUNC=ax*nx+ay*ny+az*nz PERIODIC=NO
+
+MATHEVAL ...
+LABEL=absphi
+ARG=n1x,n1y,n1z,n2x,n2y,n2z
+VAR=nax,nay,naz,nbx,nby,nbz
+FUNC=acos((nax*nbx+nay*nby+naz*nbz)/sqrt((nax*nax+nay*nay+naz*naz)*(nbx*nbx+nby*nby+nbz*nbz)))
+PERIODIC=NO
+... MATHEVAL
+
+MATHEVAL ...
+LABEL=phi
+ARG=m,absphi
+FUNC=(step(x-0)-step(0-x))*y
+PERIODIC=NO
+... MATHEVAL
+
+PRINT ARG=phi STRIDE=1 FILE=phi2_Daniel
