@@ -1,0 +1,52 @@
+#!/bin/bash
+#PBS -N leureo_mult.nvt	
+#PBS -l nodes=1:ppn=16
+#PBS -l feature=16core
+#PBS -l mem=22gb
+#PBS -l walltime=48:00:00
+## Put the output from jobs into the below directory
+## Put both the stderr and stdout into a single file
+#PBS -j oe
+## Sepcify the working directory for this job
+
+### You shouldn't need to change anything in this section ###
+###                                                       ###
+# Total Number of processors (cores) to be used by the job
+HYAK_NPE=$(wc -l < $PBS_NODEFILE)
+# Number of nodes used by MPICH
+HYAK_NNODES=$(uniq $PBS_NODEFILE | wc -l )
+
+### You shouldn't need to change anything in this section ###
+###                                                       ###
+echo "**** CPU and Node Utilization Information ****"
+echo "This job will run on $HYAK_NPE total CPUs on $HYAK_NNODES different nodes"
+echo ""
+echo "Node:CPUs Used"
+uniq -c $PBS_NODEFILE | awk '{print $2 ":" $1}'
+echo "**********************************************"
+
+module unload icc_14.0.2-impi_4.1.3.049
+module load icc_15.0.1-impi_5.0.2
+
+cd $PBS_O_WORKDIR
+
+export g09root=/gscratch/pfaendtner/codes/G09
+
+
+export GAUSS_SCRDIR=/gscratch/pfaendtner/wesley/gaussian
+. $g09root/g09/bsd/g09.profile
+
+mpiexec.hydra -rmk pbs g09 TF2.com
+
+### script for scaling
+#for ((i=1;i<=8;i++)); do
+#mpiexec.hydra -rmk pbs -np $[$i*8] $EXEC 
+#mv md.log md.$i.log
+#done;
+#
+### include any post processing here                      ###
+###                                                       ###
+#
+
+exit 0
+
