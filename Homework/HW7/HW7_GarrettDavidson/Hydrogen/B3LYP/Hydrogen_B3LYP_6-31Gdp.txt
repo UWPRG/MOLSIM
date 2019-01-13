@@ -1,7 +1,0 @@
-# Total Energy
-# X-Axis:  Optimization Step Number
-# Y-Axis:  Total Energy (Hartree)
-#                  X                   Y
-        1.0000000000       -1.1776526550
-        2.0000000000       -1.1785385217
-        3.0000000000       -1.1785393361
