@@ -1,7 +1,0 @@
-# RMS Gradient Norm
-# X-Axis:  Optimization Step Number
-# Y-Axis:  RMS Gradient Norm (Hartree/Bohr)
-#                  X                   Y
-        1.0000000000        0.0288035350
-        2.0000000000        0.0003349480
-        3.0000000000        0.0000079330
