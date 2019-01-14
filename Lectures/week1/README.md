@@ -1,1 +1,1 @@
-# Week 1
+# The World of Molecular Simulations -  Week 1
