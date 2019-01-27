@@ -2,7 +2,7 @@
 
 In this homework, you will perform a scaling analysis for a relatively large system of multiple LK-alpha peptides on Ikt.
 
-You are to perform the scaling listed below on your own and decide which set makes the most sense and justify your answer based on the scaling data.
+You are to perform the scaling listed below on your own and decide which set makes the most sense and justify your answer based on the scaling data. This can be submitted as a markdown file (`.md` extension) with your scaling results included as an image in the file along with your explanation.
 
 Instructions on how to run the simulations are given below the table.
 
