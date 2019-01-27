@@ -28,7 +28,7 @@ Instructions on how to run the simulations are given below the table.
 The input file (`topol.tpr`) can be found on Ikt at the path: `/suppscr/pfaendtner/ldgibson/molsim/gromacs_scaling/lk-alpha`. Be sure to copy it to your directory and from there you can make all the copies you need for each of the simulations. This homework requires that you have been added to the `pfaendtner` account on Hyak. If you cannot access that account, you will not have the permissions to run Gromacs or even look in the `/suppscr/pfaendtner` directory. You can check to see if you are in the group by typing `groups` on Hyak. It should list `hyak-pfaendtner` as one of your groups. If you are not in the group, you will need to be added, so please let me know as soon as possible if you are not in the group.
 
 ## Launching the simulation
-I have set up (i.e., Sarah set up) a Gromacs file that you can use to run each of the short simulations on Ikt (`ikt.hyak.uw.edu`). You can launch the MD simulation using the following command:
+I have set up (_Sarah set up_) a Gromacs file that you can use to run each of the short simulations on Ikt (`ikt.hyak.uw.edu`). You can launch the MD simulation using the following command:
 
 `mpiexec.hydra -n <MPI_ranks> gmx_mpi mdrun -ntomp <OMP_threads>`
 
@@ -48,7 +48,7 @@ There are a couple things to remember when running with multiple walkers:
 ## Automating the process
 I highly recommend that you create a bash script to automate this process for you. Otherwise, things can become very unorganized very quickly.
 
-An example of what that for-loop may look like is shown below. You can modify it to actually run each of the short simulations successively.
+An example of what that for-loop may look like is shown below. You can modify it to actually run each of the short simulations successively. Go ahead and copy this script into a file and run it to see how it works. (You may need to clean up any directories that it makes.)
 
 ```bash
 # Some other lines may need to be added as needed, for copying files possibly.
