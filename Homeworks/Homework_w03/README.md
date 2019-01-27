@@ -6,7 +6,7 @@ You are to perform the scaling listed below on your own and decide which set mak
 
 Instructions on how to run the simulations are given below the table.
 
-|Nodes |Number of walkers |MPI ranks/walker |OpenMP threads/rank |ns/day/walker |total ns/day |
+|Number of walkers |Nodes |MPI ranks/walker |OpenMP threads/rank |ns/day/walker |total ns/day |
 | ----- | ----- | ----- | ----- | ----- | ----- |
 |1 |1 |1 |1 | ?| ?|
 |1 |1 |2 |1 | ?| ?|
