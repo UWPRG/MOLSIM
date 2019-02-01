@@ -16,4 +16,6 @@
 | 4       | 2     | 8            | 1            | 6.373         | 35.492 |
 | 8       | 2     | 4            | 1            | 4.105         | 32.841 |
 
+I would recommend the 4 walkers with 2 nodes, 8 ranks/walker, and 1 thread/rank. This had by far the most ns/day othre than the very last option. It's possible the very last option might be better depending on the conditions though. Since they use the same number of nodes it might be worth trying either of them. 
+
 
