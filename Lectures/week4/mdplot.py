@@ -14,32 +14,32 @@ def plot_md_frame(atoms, box):
     plt.plot(
         [box[0][0], box[0][0]],
         [box[1][0], box[1][1]],
-        ls='--',  # dashed line
-        c='k',  # force line color to black
+        ls="--",  # dashed line
+        c="k",  # force line color to black
         alpha=0.3,  # turn down opacity to 30 %
     )
     # plot box limit to right
     plt.plot(
         [box[0][1], box[0][1]],
         [box[1][0], box[1][1]],
-        ls='--',  # dashed line
-        c='k',  # force line color to black
+        ls="--",  # dashed line
+        c="k",  # force line color to black
         alpha=0.3,  # turn down opacity to 30 %
     )
     # plot box limit to bottom
     plt.plot(
         [box[0][0], box[0][1]],
         [box[1][0], box[1][0]],
-        ls='--',  # dashed line
-        c='k',  # force line color to black
+        ls="--",  # dashed line
+        c="k",  # force line color to black
         alpha=0.3,  # turn down opacity to 30 %
     )
     # plot box limit to top
     plt.plot(
         [box[0][0], box[0][1]],
         [box[1][1], box[1][1]],
-        ls='--',  # dashed line
-        c='k',  # force line color to black
+        ls="--",  # dashed line
+        c="k",  # force line color to black
         alpha=0.3,  # turn down opacity to 30 %
     )
     plt.show()
@@ -53,32 +53,32 @@ def animate_md_traj(positions, atoms, box, speed=10):
     plt.plot(
         [box[0][0], box[0][0]],
         [box[1][0], box[1][1]],
-        ls='--',  # dashed line
-        c='k',  # force line color to black
+        ls="--",  # dashed line
+        c="k",  # force line color to black
         alpha=0.3,  # turn down opacity to 30 %
     )
     # plot box limit to right
     plt.plot(
         [box[0][1], box[0][1]],
         [box[1][0], box[1][1]],
-        ls='--',  # dashed line
-        c='k',  # force line color to black
+        ls="--",  # dashed line
+        c="k",  # force line color to black
         alpha=0.3,  # turn down opacity to 30 %
     )
     # plot box limit to bottom
     plt.plot(
         [box[0][0], box[0][1]],
         [box[1][0], box[1][0]],
-        ls='--',  # dashed line
-        c='k',  # force line color to black
+        ls="--",  # dashed line
+        c="k",  # force line color to black
         alpha=0.3,  # turn down opacity to 30 %
     )
     # plot box limit to top
     plt.plot(
         [box[0][0], box[0][1]],
         [box[1][1], box[1][1]],
-        ls='--',  # dashed line
-        c='k',  # force line color to black
+        ls="--",  # dashed line
+        c="k",  # force line color to black
         alpha=0.3,  # turn down opacity to 30 %
     )
 
@@ -87,6 +87,4 @@ def animate_md_traj(positions, atoms, box, speed=10):
         y_i = positions[i, :, 1]
         scat.set_offsets(np.c_[x_i, y_i])
 
-    return FuncAnimation(
-        fig, animate, interval=speed, frames=positions.shape[0]
-    )
+    return FuncAnimation(fig, animate, interval=speed, frames=positions.shape[0])
