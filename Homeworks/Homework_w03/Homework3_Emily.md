@@ -4,7 +4,7 @@ Simulations still running/unable to see jobs. I will input numbers when simulati
 
 |Number of walkers |Nodes |MPI ranks/walker |OpenMP threads/rank |ns/day/walker |total ns/day |
 | ----- | ----- | ----- | ----- | ----- | ----- |
-|1 |1 |1 |1 | ?| ?|
+|1 |1 |1 |1 | 1.452| 1.452|
 |1 |1 |2 |1 | ?| ?|
 |1 |1 |4 |1 | ?| ?|
 |1 |1 |8 |1 | ?| ?|
@@ -12,7 +12,7 @@ Simulations still running/unable to see jobs. I will input numbers when simulati
 |1 |1 |8 |2 | ?| ?|
 |1 |1 |4 |4 | ?| ?|
 |1 |1 |2 |8 | ?| ?|
-|1 |1 |1 |16 | ?| ?|
+|1 |1 |1 |16 | 16.815| 16.815|
 |2 |1 |8 |1 | ? | ?|
 |4 |1 |4 |1 | ? | ?|
 |8 |1 |2 |1 | ? | ?|
@@ -20,4 +20,4 @@ Simulations still running/unable to see jobs. I will input numbers when simulati
 |4 |2 |8 |1 | ? | ?|
 |8 |2 |4 |1 | ? | ?|
 
-I recommend not trying to script the entire set of simulations into a single run, unless you feel very comfortable with bash coding. I would just run all of the simulations with `-ntomp 1`, and then move to the set of simulations where `-ntomp` is changing as `-n` changes.
+I recommend having some MPIs compared to only one as the simulation runs much faster.  
