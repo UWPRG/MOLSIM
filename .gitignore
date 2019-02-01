@@ -1,0 +1,10 @@
+# virtual env
+.env/
+
+# pycharm
+.idea/
+__pycache__/
+
+# jupyter
+.ipynb_checkpoints/
+
