@@ -67,6 +67,19 @@ def update_position(pos, vel, dt):
 def f_coulomb(pos, charge):
     f = np.zeros_like(pos)
     # todo: vectorized force calc
+    distances = distance_matrix(pos, pos)
+    np.fill_diagonal(distances, 100000)
+    
+    for idx in range(distances.shape[0]):
+        du_dr = (
+                (distances[idx] / charge) * (distances[idx] / charge)
+        )
+        # get each component of the distance
+        x = (pos[:, 0] - pos[idx, 0]) / distances[idx]
+        y = (pos[:, 1] - pos[idx, 1]) / distances[idx]
+        z = (pos[:, 2] - pos[idx, 2]) / distances[idx]
+        # store forces felt by atom idx in each direction
+        f[idx] = [np.sum(x * (-du_dr)), np.sum(y * (-du_dr)), np.sum(z * (-du_dr))]
     return f
 
 
