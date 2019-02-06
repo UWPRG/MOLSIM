@@ -97,17 +97,16 @@ def f_lennard_jones(positions, sigmas, epsilons):
     f = np.zeros_like(positions)
     for idx in range(distances.shape[0]):
         du_dr = (
-            4
-            * epsilons
+            4 * epsilons
             * (
-                12 * (distances[idx] / sigmas) ** (-11)
-                - 6 * (distances[idx] / sigmas) ** (-5)
+                -12 * ((distances[idx]) ** (-13) / sigmas ** (-12))
+                + 6 * ((distances[idx]) ** (-7) / sigmas ** (-6))
             )
         )
         # get each component of the distance
-        x = (positions[:, 0] - positions[idx, 0]) / distances[idx]
-        y = (positions[:, 1] - positions[idx, 1]) / distances[idx]
-        z = (positions[:, 2] - positions[idx, 2]) / distances[idx]
+        x = (positions[idx, 0] - positions[:, 0]) / distances[idx]
+        y = (positions[idx, 1] - positions[:, 1]) / distances[idx]
+        z = (positions[idx, 2] - positions[:, 2]) / distances[idx]
         # store forces felt by atom idx in each direction
         f[idx] = [np.sum(x * (-du_dr)), np.sum(y * (-du_dr)), np.sum(z * (-du_dr))]
 
