@@ -67,17 +67,18 @@ def update_position(pos, vel, dt):
 def f_coulomb(pos, charge):
     f = np.zeros_like(pos)
     # todo: vectorized force calc
-    distances = distance_matrix(pos, pos)
+        # calculate pairwise distance matrix
+    distances = distance_matrix(positions, positions)
     np.fill_diagonal(distances, 100000)
-    
+    eps = 0.0000000002306
+    # calculate forces
     for idx in range(distances.shape[0]):
-        du_dr = (
-                (distances[idx] / charge) * (distances[idx] / charge)
-        )
+        du_dr = -eps * ((distances[idx]) ** (-2)) * charge 
+                
         # get each component of the distance
-        x = (pos[:, 0] - pos[idx, 0]) / distances[idx]
-        y = (pos[:, 1] - pos[idx, 1]) / distances[idx]
-        z = (pos[:, 2] - pos[idx, 2]) / distances[idx]
+        x = (pos[idx, 0] - pos[:, 0]) / distances[idx]
+        y = (pos[idx, 1] - pos[:, 1]) / distances[idx]
+        z = (pos[idx, 2] - pos[:, 2]) / distances[idx]
         # store forces felt by atom idx in each direction
         f[idx] = [np.sum(x * (-du_dr)), np.sum(y * (-du_dr)), np.sum(z * (-du_dr))]
     return f
@@ -110,17 +111,16 @@ def f_lennard_jones(positions, sigmas, epsilons):
     f = np.zeros_like(positions)
     for idx in range(distances.shape[0]):
         du_dr = (
-            4
-            * epsilons
+            4 * epsilons
             * (
-                12 * (distances[idx] / sigmas) ** (-11)
-                - 6 * (distances[idx] / sigmas) ** (-5)
+                -12 * ((distances[idx]) ** (-13) / sigmas ** (-12))
+                + 6 * ((distances[idx]) ** (-7) / sigmas ** (-6))
             )
         )
         # get each component of the distance
-        x = (positions[:, 0] - positions[idx, 0]) / distances[idx]
-        y = (positions[:, 1] - positions[idx, 1]) / distances[idx]
-        z = (positions[:, 2] - positions[idx, 2]) / distances[idx]
+        x = (positions[idx, 0] - positions[:, 0]) / distances[idx]
+        y = (positions[idx, 1] - positions[:, 1]) / distances[idx]
+        z = (positions[idx, 2] - positions[:, 2]) / distances[idx]
         # store forces felt by atom idx in each direction
         f[idx] = [np.sum(x * (-du_dr)), np.sum(y * (-du_dr)), np.sum(z * (-du_dr))]
 
