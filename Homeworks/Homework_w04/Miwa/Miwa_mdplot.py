@@ -9,7 +9,7 @@ def plot_md_frame(atoms, box):
     # force square figure
     plt.figure(figsize=(5, 5))
     # plot atom position
-    plt.scatter(positions[:, 0], positions[:, 1], s=size, alpha=1, c='r')
+    plt.scatter(positions[:, 0], positions[:, 1], s=size, alpha=0.5)
     # plot box limit to left
     plt.plot(
         [box[0][0], box[0][0]],
@@ -48,7 +48,8 @@ def plot_md_frame(atoms, box):
 def animate_md_traj(positions, atoms, box, speed=10):
     fig, ax = plt.subplots(figsize=(5, 5))
     size = np.array([atom.sigma for atom in atoms]) * (4000 / box[0][1])
-    scat = ax.scatter(positions[0, :, 0], positions[0, :, 1], s=size, alpha=0.5)
+    charge = np.array([atom.charge for atom in atoms]) * (4000 / box[0][1])
+    scat = ax.scatter(positions[0, :, 0], positions[0, :, 1], s=size, alpha=0.5,c=charge)
     # plot box limit to left
     plt.plot(
         [box[0][0], box[0][0]],

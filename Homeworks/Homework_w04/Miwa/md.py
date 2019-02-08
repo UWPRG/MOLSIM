@@ -65,9 +65,17 @@ def update_position(pos, vel, dt):
 
 
 def f_coulomb(pos, charge):
-    f = np.zeros_like(pos)
     # todo: vectorized force calc
-    return f
+    
+    # calculate pairwise distance matrix
+    distances = distance_matrix(pos, pos)
+    np.fill_diagonal(distances, 100000)
+
+    # calculate forces
+    f = np.zeros_like(pos)
+    for
+    return f idx in range(distances.shape[0]):
+        du_dr = (8.987E18)*(charges)*(charges) 
 
 
 def f_lennard_jones(positions, sigmas, epsilons):
