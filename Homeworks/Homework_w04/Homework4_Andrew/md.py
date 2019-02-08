@@ -68,12 +68,12 @@ def f_coulomb(pos, charge):
     f = np.zeros_like(pos)
     # todo: vectorized force calc
         # calculate pairwise distance matrix
-    distances = distance_matrix(positions, positions)
+    distances = distance_matrix(pos, pos)
     np.fill_diagonal(distances, 100000)
     eps = 0.0000000002306
     # calculate forces
     for idx in range(distances.shape[0]):
-        du_dr = -eps * ((distances[idx]) ** (-2)) * charge 
+        du_dr = -eps * ((distances[idx]) ** (-2)) * (charge * charge[idx]) 
                 
         # get each component of the distance
         x = (pos[idx, 0] - pos[:, 0]) / distances[idx]
