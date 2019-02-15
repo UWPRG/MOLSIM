@@ -17,4 +17,4 @@ Room: NAN391
 |Week 7 | 2/22 | [The "VMD"](Lectures/week7) | Sarah |
 |Week 8 | 3/1 | No class - PhD recruitment | - |
 |Week 9 | 3/8 | [Trajectory analyses: RDF, RMSD, autocorrelation](Lectures/week9) | Janani |
-|Week 10 | 3/15 | Final presentations | - |
+|Week 10 | 3/15 | Final presentations - [Project Description](Final_Project/) | - |
