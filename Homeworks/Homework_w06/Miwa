@@ -1,0 +1,18 @@
+GROMACS gives the following error:
+
+WARNING 1 [file topol.top, line 364]:
+  The bond in molecule-type Protein between atoms 5 C and 6 O has an estimated oscillational period of 2.3e-02 ps, which is less than 5 times the time step of 1.0e-02 ps.
+  Maybe you forgot to change the constraints mdp option.
+
+The error appears in the following step:
+gmx_mpi grompp -f ./mdp_files/nvt.mdp -c nvt.gro -p topol.top
+
+Why is this a problem?
+Likely, GROMACS needs the oscillation to be significantly larger than the timestep to really ensure that no oscillations happen within a timestep. Essentially, just a way to ensure that the resolution of the simulation is good enough because it's just that the estimated oscillation is within 2.3e-02 ps. It could be larger or smaller within say, a factor of 5.  
+
+The timestep is used directly by the integrator. In this case the integrator is md. GROMACS says that md is a "leapfrog algorithm". This could have some influence over why the timestep must be at least 5 times smaller than the oscillation period.
+
+Possible solutions?
+The most obvious solution would be to literally just make a small enough timestep. However, this could cause problems with longer simulations and become unecessarily expensive. Another brute solution would be to use an option to force ignoring the warnings. It's not like the simulation can't actually run - there's just a more significant risk of missing oscillations.
+
+Likely the best solution is to simply choose a different force field, model, integrator etc. An exact decision would come from the conditions of the system and the benifits of each simulation option. 
