@@ -1,0 +1,24 @@
+Andrew Kullman
+HW 6
+Due 2/22/2019
+MOLSIM CHEME_599
+
+On grompp with nvt gives the following warning:
+
+WARNING 1 [file topol.top, line 364]:
+  The bond in molecule-type Protein between atoms 5 C and 6 O has an
+  estimated oscillational period of 2.3e-02 ps, which is less than 5 times
+  the time step of 2.0e-02 ps.
+  Maybe you forgot to change the constraints mdp option.
+
+This warning makes me believe that the time step is to large for certain estimated molecular
+motions of the system. In the above case, the 5 C and 6 O atom could complete 5 oscillations
+before a single time step. I believe that this would be an issue because in each time step 
+we would be losing critical data and information about the atoms energies and positions.
+
+To fix this, I think we should reduce the md time step. This would help with the simulation 
+accuracy and understanding how the system evolves. This would come at the cost of a shorter 
+total simulation time if the simulation is ran for the same wall time. That or the 
+simulation would cost more resources.
+
+
