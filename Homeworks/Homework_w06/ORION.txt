@@ -1,0 +1,18 @@
+The simulation gives the following error when nvt production md is run:
+
+WARNING 1 [file topol.top, line 364]:
+  The bond in molecule-type Protein between atoms 5 C and 6 O has an
+  estimated oscillational period of 2.3e-02 ps, which is less than 5 times
+  the time step of 2.0e-02 ps.
+  Maybe you forgot to change the constraints mdp option.
+
+This is due to the md time step being too large compared to the fastest 
+molecular movement (harmonic oscillation of a carbon-oxygen bond). I think
+the 5 times is a fudge factor to ensure the time step is smaller than any
+single molecular motion. It's possible to fix this by reducing the time step
+used in md. In this case, reducing the time step is a reasonable solution
+because 2.0e-2 ps is an order of magnitude larger than what is usually
+used in simulations (20 femtoseconds versus 2 femtoseconds). Another possible
+solution would be to introduce additional holonomic constraints although
+this might lead to significant error in force calculations. 
+
