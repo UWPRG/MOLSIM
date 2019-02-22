@@ -1,0 +1,6 @@
+WARNING 1 [file topol.top, line 364]:
+
+The bond in molecule-type Protein between atoms 5 C and 6 O has an estimated oscillational period of 2.3e-02 ps, which is less than 5 times the time step of 2.0e-02 ps.
+Maybe you forgot to change the constraints mdp option.
+
+I think this warning may have two different root causes. First, the 'dt' parameter for md may be set too large relative to the expected molecular oscillation period of 23fs. Second, it could be that the force field constants are incorrectly set between the atoms 5C and 6O. I checked the latter situation, and in all the cases I could find the force constants seemed reasonable. Thus, I think the 'dt' parameter in mdp options needs to be changed to a lower time step value. This will ensure that multiple computations are completed per oscillation period, rather than ~1 calculation per period. 
