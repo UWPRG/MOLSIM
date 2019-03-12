@@ -1,0 +1,14 @@
+The simulation confronted an error when working on command line:
+	
+gmx_mpi grompp -f ./mdp_files/nvt.mdp -c nvt.gro -p topol.top
+
+WARNING 1 [file topol.top, line 364]:
+  The bond in molecule-type Protein between atoms 5 C and 6 O has an
+  estimated oscillational period of 2.3e-02 ps, which is less than 5 times
+  the time step of 2.0e-02 ps.
+  Maybe you forgot to change the constraints mdp option.
+
+This warning arise because the oscillation time is much smaller compared to the time step 
+we set. The GROMACS need around 5 times of the time step to complete a single period of oscillation. However, in this case, the oscillation occurs four times during the simulation. 
+
+To solve this error, we may simply modify the time step in mdp option, or we could change another force field to make the oscillation time meets our setting
