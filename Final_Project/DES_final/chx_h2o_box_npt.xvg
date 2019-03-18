@@ -1,0 +1,37 @@
+# This file was created Thu Mar 14 20:48:58 2019
+# Created by:
+#                       :-) GROMACS - gmx energy, 2019 (-:
+# 
+# Executable:   /mnt/c/Users/shead/Documents/gromacs-2019/build/bin/gmx
+# Data prefix:  /usr/local/gromacs
+# Working dir:  /mnt/c/Users/shead/Documents/MolSimClass/final/deliverables/chx_box/ch_h2o_box_logs_2
+# Command line:
+#   gmx energy -f npt_ener.edr -o npt.xvg
+# gmx energy is part of G R O M A C S:
+#
+# God Rules Over Mankind, Animals, Cosmos and Such
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(bar)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Pressure"
+    0.000000  -10653.435547
+    1.000000  -10675.992188
+    2.000000  -10720.114258
+    3.000000  -10833.571289
+    5.000000  -10951.409180
+    6.000000  -11014.261719
+    8.000000  -11039.026367
+   10.000000  -11078.531250
+   11.000000  -11111.125000
+   12.000000  -11141.604492
+   13.000000  -11169.871094
+   14.000000  -11195.436523
+   16.000000  -11208.135742
