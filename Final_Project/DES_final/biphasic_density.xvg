@@ -1,0 +1,74 @@
+# This file was created Sun Mar 17 22:00:47 2019
+# Created by:
+#                      :-) GROMACS - gmx density, 2019 (-:
+# 
+# Executable:   /mnt/c/Users/shead/Documents/gromacs-2019/build/bin/gmx
+# Data prefix:  /usr/local/gromacs
+# Working dir:  /mnt/c/Users/shead/Documents/MolSimClass/final_raw_files/biphasic_run
+# Command line:
+#   gmx density -f traj_comp.xtc -o density2.xvg
+# gmx density is part of G R O M A C S:
+#
+# Getting the Right Output Means no Artefacts in Calculating Stuff
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Density (kg m\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "System"
+    0.114512          748.656
+    0.343536          731.984
+     0.57256           746.75
+    0.801584          750.615
+     1.03061          747.944
+     1.25963          753.415
+     1.48866          749.859
+     1.71768          752.362
+      1.9467          751.544
+     2.17573          752.211
+     2.40475           751.53
+     2.63378          752.026
+      2.8628          752.043
+     3.09182          752.481
+     3.32085          751.438
+     3.54987          752.925
+      3.7789           750.41
+     4.00792          753.043
+     4.23694          749.515
+     4.46597          754.205
+     4.69499          746.338
+     4.92402          754.142
+     5.15304          740.336
+     5.38206          737.577
+     5.61109          742.552
+     5.84011          752.117
+     6.06914            911.7
+     6.29816          967.434
+     6.52718          968.914
+     6.75621          968.043
+     6.98523          967.824
+     7.21426          968.092
+     7.44328          967.702
+      7.6723           967.96
+     7.90133           967.97
+     8.13035          967.768
+     8.35938           968.23
+      8.5884          967.752
+     8.81742          967.832
+     9.04645          967.863
+     9.27547          968.018
+      9.5045          968.242
+     9.73352          967.798
+     9.96254          967.639
+     10.1916          968.249
+     10.4206          967.592
+     10.6496          969.474
+     10.8786           965.12
+     11.1077          887.922
+     11.3367          735.525

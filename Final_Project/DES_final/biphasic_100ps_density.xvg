@@ -1,0 +1,74 @@
+# This file was created Sun Mar 17 22:04:04 2019
+# Created by:
+#                      :-) GROMACS - gmx density, 2019 (-:
+# 
+# Executable:   /mnt/c/Users/shead/Documents/gromacs-2019/build/bin/gmx
+# Data prefix:  /usr/local/gromacs
+# Working dir:  /mnt/c/Users/shead/Documents/MolSimClass/final_raw_files/biphasic_run
+# Command line:
+#   gmx density -f first100ps.xtc -o density_100ps.xvg
+# gmx density is part of G R O M A C S:
+#
+# Green Red Orange Magenta Azure Cyan Skyblue
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Density (kg m\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "System"
+     0.11464          743.707
+    0.343921          740.689
+    0.573202          723.376
+    0.802483          753.644
+     1.03176          737.992
+     1.26105          744.405
+     1.49033          735.501
+     1.71961          746.935
+     1.94889          742.277
+     2.17817           753.23
+     2.40745          740.314
+     2.63673          764.343
+     2.86601          721.556
+     3.09529           757.95
+     3.32457          731.324
+     3.55386          749.661
+     3.78314          749.476
+     4.01242          737.345
+      4.2417          762.283
+     4.47098          742.483
+     4.70026          747.096
+     4.92954          747.771
+     5.15882          736.396
+      5.3881          736.339
+     5.61738          735.272
+     5.84667          737.955
+     6.07595          880.244
+     6.30523          948.968
+     6.53451          971.803
+     6.76379          961.338
+     6.99307          967.047
+     7.22235          969.481
+     7.45163          964.926
+     7.68091          960.663
+     7.91019            965.4
+     8.13947          963.833
+     8.36876          957.511
+     8.59804          969.005
+     8.82732          961.279
+      9.0566          967.559
+     9.28588          967.301
+     9.51516           962.56
+     9.74444          968.898
+     9.97372          966.382
+      10.203          965.044
+     10.4323          959.948
+     10.6616          968.668
+     10.8908          959.295
+     11.1201           887.97
+     11.3494          737.327
